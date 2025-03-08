@@ -70,5 +70,5 @@ createIndex:
   }
 ```
 
-> Takeaway: In layman's term is it creates a new object inside object store.
+> Takeaway: It creates a new object inside object store.  
 > Pre-requisite: objectStore
