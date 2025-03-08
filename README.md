@@ -42,31 +42,33 @@ Easiest way to get started with indexedDB.
 
 createObjectStore:
 > Implementation:
-  ```javascript
-    // Create object store
-    let store = db.createObjectStore("users", { keyPath: "id" });
-  ```
+```javascript
+  // Create object store
+  let store = db.createObjectStore("users", { keyPath: "id" });
+```
 > Pre-requisite: browser supports window.indexedDB
 ------------------------------------------------------------------------
 createIndex:
 > Implementation:
-  ```javascript
-    // Create object store
-    let store = db.createObjectStore("users", { keyPath: "id" });
+```javascript
+  // Create object store
+  let store = db.createObjectStore("users", { keyPath: "id" });
 
-    // Create an index on "email" field
-    store.createIndex("emailIndex", "email", { unique: true });
-  ```
+  // Create an index on "email" field
+  store.createIndex("emailIndex", "email", { unique: true });
+```
 
 > Sample in JSON Terms:
-  ```json
-    objectstore: {
+```json
+  {
+    "objectStore": {
       "emailIndex": {
         "alice@example.com": 1,
         "bob@example.com": 2
       }
-    };
-  ```
+    }
+  }
+```
 
 > Takeaway: In layman's term is it creates a new object inside object store.
 > Pre-requisite: objectStore
